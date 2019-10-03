@@ -1,4 +1,4 @@
-pragma solidity >=0.5.0 <0.6.0;
+pragma solidity >=0.5.0 <0.7.0;
 
 contract Asignatura {
     
@@ -28,8 +28,7 @@ contract Asignatura {
     constructor(
         string memory _nombre,
         string memory _curso
-    ) public {
-        
+    ) public {  
         profesor = msg.sender;
         nombre = _nombre;
         curso = _curso;
@@ -62,7 +61,7 @@ contract Asignatura {
         string memory _email
     ) public {
         
-        require( bytes(_nombre).length > 0, "Debes especificar un nombre");
+        require(bytes(_nombre).length > 0, "Debes especificar un nombre");
         
         matriculas.push(msg.sender);
         
